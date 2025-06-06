@@ -27,10 +27,12 @@ strong {
 
 .site-header {
   width: 100%;
-  padding: 10px 0;
+  padding: 20px 0;
   text-align: center;
-  background-color: #5e17eb;
+  background: linear-gradient(to right, #004aad, #6a3bf0);
+  color: #fef9f4;
 }
+
 
 .site-header h1 {
   font-size: 15px;
@@ -40,7 +42,7 @@ strong {
 
 .footer {
   width: 100%;
-  padding: 25px 0;
+  padding: 20px 0;
   text-align: center;
   background-color: #fffaf1;
 }
@@ -70,7 +72,7 @@ strong {
   text-align: center;
   width: 100%;
   overflow: hidden;
-  background-color: #5e17eb;
+  background: linear-gradient(to right, #004aad, #6a3bf0);
 }
 
 #main-img-wrapper {
@@ -125,7 +127,7 @@ strong {
 }
 
 #list-item-wrapper {
-  margin: 150px auto;
+  margin: 120px auto;
   padding: 0 15px;
   max-width: 383px;
   min-width: 319px;
@@ -173,7 +175,7 @@ strong {
 }
 
 .section-underline-dark {
-  background-color: #5e17eb;
+  background: linear-gradient(to right, #004aad, #6a3bf0);
 }
 
 .section-underline-light {
@@ -190,13 +192,23 @@ strong {
   display: block;
 }
 
+@media (max-width: 768px) {
+  .section p {
+    font-size: 1rem;
+  }
+
+  .section small {
+    font-size: 12px;
+  }
+}
+
 #section1 {
   background: #fffaf1;
 }
 
 #section2 {
   color: #fffaf1;
-  background-color: #5e17eb;
+  background: linear-gradient(to right, #004aad, #6a3bf0);
 }
 
 #section3 {
@@ -205,7 +217,7 @@ strong {
 
 #section4 {
   color: #fffaf1;
-  background-color: #5e17eb;
+  background: linear-gradient(to right, #004aad, #6a3bf0);
 }
 
 .bus-emoji {
@@ -238,15 +250,22 @@ strong {
 }
 
 .survey-link {
-  background: #5e17eb;
+  background: linear-gradient(to right, #004aad, #6a3bf0);
   color: #fffaf1;
-  border: 2px solid #5e17eb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .survey-link-light {
   background: #fffaf1;
-  color: #5e17eb;
-  border: 2px solid #5e17eb;
+  color: #004aad;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.survey-link:hover,
+.survey-link-light:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
 }
 
 .survey-link-light a {
@@ -267,14 +286,14 @@ strong {
 
 .timeline-path {
   fill: none;
-  stroke: #5e17eb;
+  stroke: #004aad;
   stroke-dasharray: 6, 6;
   stroke-width: 3;
 }
 
 .point-circle {
   fill: #fffaf1;
-  stroke: #5e17eb;
+  stroke: #004aad;
   stroke-width: 4;
 }
 
@@ -345,6 +364,28 @@ strong {
   transform: scale(1.1);
 }
 
+.floating-nav a.share-float {
+  animation: bounceAttention 2s infinite;
+}
+
+@keyframes bounceAttention {
+  0%, 100% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.15);
+  }
+  40% {
+    transform: scale(0.98);
+  }
+  60% {
+    transform: scale(1.05);
+  }
+  80% {
+    transform: scale(0.97);
+  }
+}
+
 @media (max-width: 768px) {
   .floating-nav {
     bottom: 12px;
@@ -413,4 +454,111 @@ strong {
     bottom: -30px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.campaign-box {
+  color: #373737;
+  background: #f7f3ff;
+  border-radius: 16px;
+  padding: 24px 20px;
+  margin: 24px 0;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.campaign-schedule {
+  list-style: none;
+  padding-left: 0;
+  margin: 16px 0;
+}
+
+.campaign-schedule li {
+  font-size: 15px;
+  margin: 6px 0;
+}
+
+.balloon-wrapper {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.balloon-label {
+  font-weight: bold;
+  color: #373737;
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+.tooltip-box {
+  position: relative;
+  background: #5e17eb;
+  color: #fffaf1;
+  padding: 16px 22px;
+  border-radius: 24px;
+  font-size: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  animation: floaty 3s ease-in-out infinite;
+}
+
+.tooltip-box::before {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 10px solid transparent;
+  border-bottom-color: #5e17eb;
+}
+
+@keyframes floaty {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .campaign-box {
+    padding: 24px 20px;
+  }
+
+  .tooltip-box {
+    font-size: 14px;
+    padding: 14px 18px;
+  }
+}
+
+#copy-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #373737;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  line-height: 1.5;
+  opacity: 0;
+  z-index: 9999;
+
+  display: inline-block;
+  width: auto;
+  white-space: nowrap;
+  max-width: 90vw;
+  overflow: hidden;
+
+  transition: opacity 0.6s ease, transform 0.4s ease;
+}
+
+#copy-toast.show {
+  opacity: 1;
 }
