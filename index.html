@@ -1,62 +1,152 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="icon" href="./favicon.ico" type="image/x-icon">
-  <title>커밍쑨</title>
-  <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      background-color: #ffffff;
-      font-family: 'Segoe UI', sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-
-    .container {
-      padding: 20px;
-    }
-
-    .container h1 {
-      font-size: 1.5rem;
-      margin-bottom: 20px;
-      color: #333;
-      font-weight: normal;
-    }
-
-    .container h2 {
-      font-size: 2.2rem;
-      margin: 0;
-      color: #111;
-    }
-
-    .highlight {
-      font-weight: bold;
-      font-size: 2.6rem;
-      margin-top: 20px;
-      color: #3549FF;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dongle&family=Gowun+Batang&family=IBM+Plex+Sans+KR&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="index.css">
+  <title>2025 와이유니온 첫번째 캠페인</title>
 </head>
 <body>
-  <header style="position: fixed; top: 0; left: 0; right: 0; background-color: #3549FF; color: white; text-align: center; padding: 16px 20px; font-size: 1.2rem; z-index: 1000;">
-    와이유니온 캠페인 사전 안내
-  </header>
+  <div class="page-wrapper">
+    <!-- header -->
+    <header class="site-header">
+      <h1>와이유니온 1차 캠페인</h1>
+    </header>
 
-  <div class="container">
-    <h1>2025년 6월</h1>
-    <h2>와이유니온<br/>첫번째 캠페인</h2>
-    <div class="highlight">『이동도 노동이다』</div>
-    <h1 style="margin-top: 40px;">🎉 Coming Soon 🎉</h1>
+    <!-- hero-section -->
+    <section class="hero-section">
+      <div id="main-img-wrapper">
+        <div id="intro-main">
+          <p id="join-us-text">구경하기</p>
+          <img id="down-arrow-icon" src="images/down-arrow.png" alt="down arrow icon">
+        </div>
+        <img class="slogan-img" src="images/slogan.png" alt="slogan image">
+      </div>
+
+      <ul id="list-item-wrapper">
+        <li class="list-item">🏢금토동사옥이전</li>
+        <li class="list-item">🚘막히는도로</li>
+        <li class="list-item">🚍대중교통인프라부족</li>
+        <li class="list-item">💸교통비부담증가</li>
+        <li class="list-item">⏰출퇴근시간증가</li>
+        <li class="list-item">🛣️셔틀버스노선부족</li>
+        <li class="list-item">⏳긴셔틀버스배차간격</li>
+        <li class="list-item">😴개인시간감소</li>
+        <li class="list-item">🥱피로도누적</li>
+        <li class="list-item">📉업무집중도감소</li>
+      </ul>
+    </section>
+
+    <!-- section1 -->
+    <section class="section" id="section1">
+      <h2 class="section-heading">설문조사</h2>
+      <div class="section-underline-base section-underline-dark"></div>
+      <p><strong>내 시간은 왜 통근길에서 사라지나요?</strong></p>
+      <div class="bus-emoji">🚌</div>
+      <p>캠페인 설문조사 마감일까지 <strong><span data-deadline style="color:red">n</span>일</strong> 남았어요.</p>
+      <a class="survey-link" href="https://forms.gle/fz28SQSxPySrbUrT9" target="_blank">👉 설문조사 참여하기</a>
+
+      <div class="timeline-wrapper">
+        <svg viewBox="0 0 300 700">
+          <path d="M150 50 Q50 100, 150 150 T150 250 T150 350 T150 450 T150 550 T150 650" class="timeline-path" />
+          <g><circle class="point-circle" cx="150" cy="50" r="16" /><text class="emoji" x="150" y="50">☀️</text><text class="label" x="175" y="60" dy="-0.60em">기상!!</text></g>
+          <g><circle class="point-circle" cx="150" cy="150" r="16" /><text class="emoji" x="150" y="150">🚶</text><text class="label" x="80" y="160" dy="-0.55em">출근러쉬</text></g>
+          <g><circle class="point-circle" cx="150" cy="250" r="16" /><text class="emoji" x="150" y="250">🚌</text><text class="label" x="175" y="260" dy="-0.60em">출근셔틀</text></g>
+          <g><circle class="point-circle" cx="150" cy="350" r="16" /><text class="emoji" x="150" y="350">💼</text><text class="label" x="100" y="360" dy="-0.65em">근무</text></g>
+          <g><circle class="point-circle" cx="150" cy="450" r="16" /><text class="emoji" x="150" y="450">🚌</text><text class="label" x="175" y="460" dy="-0.60em">퇴근셔틀</text></g>
+          <g><circle class="point-circle" cx="150" cy="550" r="16" /><text class="emoji" x="150" y="550">🚶</text><text class="label" x="80" y="560" dy="-0.55em">퇴근러쉬</text></g>
+          <g><circle class="point-circle" cx="150" cy="650" r="16" /><text class="emoji" x="150" y="650">🏠</text><text class="label" x="175" y="660" dy="-0.60em">드디어 집 😭</text></g>
+        </svg>
+      </div>
+    </section>
+
+    <section class="section" id="section2">
+      <h2>6월 2주차 챌린지</h2>
+      <div class="section-underline-base section-underline-light"></div>
+      <p><small>응모기간: 2025.06.09 월 ~ 2025.06.14 토</small></p>
+      <p><strong>《노동조합 카톡 채널로 기상 시간 인증하기》</strong></p>
+      <p>
+        와이유니온 카톡 채널 추가 후, 
+        <br/>여러분들의 <strong>기상 시간</strong>을 사진과 함께 인증해주세요.
+        <br/>추첨을 통해 소정의 선물을 드립니다! 🎁</p>
+      <p>
+        <small>
+          ※ 발송자 및 수신된 메시지는 경품 추첨 외 다른 용도로는 사용되지 않습니다.
+        </small>
+      </p>
+
+      <div id="slider-wrapper">
+          <div id="slider-container">
+              <div id="slider-content-wrapper">
+                  <div id="slider-content">
+                      <img src="images/slider-1.png" class="slider-image" alt="slide-1">
+                      <img src="images/slider-2.png" class="slider-image" alt="slide-2">
+                  </div>
+              </div>
+              <div class="slider-button" id="left-button">&lt;</div>
+              <div class="slider-button" id="right-button">&gt;</div>
+              <div id="slider-index">1/2</div>
+          </div>
+      </div> 
+      
+      <div class="survey-link-light">
+        <a href="https://pf.kakao.com/_pgaxnG" target="_blank">👉 와이유니온 공식 카톡 채널</a>
+      </div>
+      <div class="qr-or-text">OR</div>
+      <div class="qr-code">
+        <img src="images/kakao-qr.png" alt="카카오 채널 QR 코드" />
+      </div>      
+    </section>
+
+    <section class="section" id="section3">
+      <h2>TO. 회사</h2>
+      <div class="section-underline-base section-underline-dark"></div>
+      <p><strong>여러분의 출퇴근은 안녕하신가요?</strong></p>
+      <p>
+        회사의 구성원으로서 
+        <br/>회사에게 전하고 싶은 말을 남겨주세요!
+      </p>
+      <p><small>※ 게시글은 익명으로 작성됩니다.</small></p>
+      <iframe 
+        src="https://padlet.com/yunioncampaign/first"
+        width="100%"
+        height="800"
+        style="border:none;"
+        allow="camera; microphone; geolocation">
+      </iframe>
+    </section>
+
+    <section class="section" id="section4">
+      <h2>모이면 - 바뀐다</h2>
+      <div class="section-underline-base section-underline-light"></div>
+      <p>한 사람 한 사람이 모여 회사를 바꾸는 영향력이 됩니다.</p>
+      <p>지금, 와이유니온 활동에 동참해주세요 :)</p>
+      <div class="survey-link-light">
+        <a href="https://y-union.org" target="_blank">👉 와이유니온 공식사이트</a>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <strong>전국화학섬유식품산업노동조합 야놀자인터파크지회 와이유니온</strong>
+        <small>© Y-union All rights reserved.</small>
+      </div>
+    </footer>    
   </div>
 
-  <footer style="text-align: center; padding: 40px 20px; font-size: 0.9rem; color: #888; background-color: #f8f8f8; position: fixed; bottom: 0; left: 0; right: 0;">
-    © 2025 와이유니온. All rights reserved.
-  </footer>
+  <div class="floating-nav">
+    <a href="#section1" title="설문조사">📋</a>
+    <a href="#section2" title="챌린지">🎉</a>
+    <a href="#section3" title="회사에게">💬</a>
+    <a href="#section4" title="동참하기">💪</a>
+    <a href="#" title="맨 위로">🔼</a>
+  </div>   
+  <script src="index.js"></script>
 </body>
 </html>
