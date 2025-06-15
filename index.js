@@ -138,3 +138,18 @@ function sharePage() {
   navigator.clipboard.writeText("https://y-union.github.io").catch(console.error);
 }
 
+// 이벤트 독려 말풍선
+const balloon = document.querySelector('.floating-nav a:nth-child(2) .balloon');
+let scrollTimeout;
+
+window.addEventListener('scroll', () => {
+  if (!balloon) return;
+
+  balloon.classList.add('show');
+
+  clearTimeout(scrollTimeout);
+
+  scrollTimeout = setTimeout(() => {
+    balloon.classList.remove('show');
+  }, 1000);
+});
