@@ -405,7 +405,7 @@ strong {
     padding-top: 0px;
     position: relative;
     height: 540px;
-    z-index: 10000;
+    z-index: 100;
 }
 
 #slider-container {
@@ -561,4 +561,41 @@ strong {
 
 #copy-toast.show {
   opacity: 1;
+}
+
+.floating-nav a:nth-child(2) {
+  position: relative;
+  z-index: 10000;
+}
+
+.floating-nav a:nth-child(2) .balloon {
+  position: absolute;
+  top: 50%;
+  left: 44px;
+  transform: translateY(-50%);
+  background-color: rgba(255, 239, 150, 0.85);
+  color: #333;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 12px;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  z-index: 20000;
+  animation: floatBalloon 3.2s ease-in-out infinite;
+}
+
+@keyframes floatBalloon {
+  0%, 100% {
+    transform: translateY(-50%);
+  }
+  25% {
+    transform: translateY(-58%);
+  }
+  50% {
+    transform: translateY(-54%);
+  }
+  75% {
+    transform: translateY(-60%);
+  }
 }
