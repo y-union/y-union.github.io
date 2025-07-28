@@ -11,3 +11,14 @@ window.addEventListener("scroll", function () {
 scrollTopBtn.addEventListener("click", function () {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+  document.body.style.overflow = "auto";
+}
+
+window.onload = function () {
+  const popup = document.getElementById("popup");
+  popup.style.display = "flex";
+  document.body.style.overflow = "hidden";
+};
